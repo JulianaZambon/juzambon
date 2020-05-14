@@ -7,21 +7,24 @@
 
 body {
     background-image: url("http://www.ghibli.jp/images/buta1.jpg");
-    background-size: auto 118vh;
-    font-family: Arial;
-    height: 100vh;
+    background-size: 210vh;
+    font-family: 'Cinzel Decorative', cursive;
+    height: 120vh;
     font-size: 14px;
-  }
+ }
+
+
 /* breakpoint*/
 /* se a tela tiver pelo menos 400px vai carregar estes estilos*/
 @media (min-width: 600px) {
   body {
       font-size: 18px;
   }
+
 }
 
   header {
-      height: 50vh;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -37,8 +40,15 @@ body {
   .menu a {
       color: #BDB76B;
       display: block;
-      background:whitesmoke;
+      background: whitesmoke;
       padding: 10px 20px;
+      transition: background-color 1s, color 1s;
+      z-index: 1;
+  }
+
+  .menu a:hover {
+      background-color: #BDB76B;
+      color: whitesmoke;
   }
 
   .menu li {
@@ -51,13 +61,28 @@ body {
   }
   
   a {
-    color: black;
+    color: whitesmoke;
     text-decoration: none;
   }
   
   a:hover {
     text-decoration: underline;
   }
+
+/* .titulo {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  
+  animation: linear 2s animacaoTitulo forwards;
+}
+*/
+@keyframes animacaoTitulo {
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+
+}
   
   .site-title {
     color: #BDB76B;
@@ -70,18 +95,96 @@ body {
   }
   
   .site-subtitle {
-    color: whitesmoke;
+    color: white;
+    /* #BDB76B*/
     text-align: center;
     font-family: 'Nixie One', cursive;
     font-size: 1.4em;
+    line-height: 2.8em;
   }
 
   .text {
       color: whitesmoke;
   }
 
-
-.portifólio {
-    background-color: whitesmoke;
+.portfolio {
+    background-color: #BDB76B;
     padding: 2em;
+    min-height: 100vh;
 }
+
+.contato {
+  background-color: #BDB76B;
+  padding: 2em;
+  min-height: 38vh;
+}
+
+.portfolio h2 {
+  color: whitesmoke;
+  font-size: 1.4em;
+  font-family: 'Nixie One', cursive;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.contato h2 {
+  color: whitesmoke;
+  font-size: 1.4em;
+  font-family: 'Nixie One', cursive;
+  margin-bottom: 1.5em;
+  font-size: 1.8em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 3em;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+  grid-template-columns: 270px 270px;
+  }
+}
+@media (min-width: 880px) {
+  .portfolio .grid {
+  grid-template-columns: repeat(3, 340px);
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh - 8em - 48px);
+  background-color: #BDB76B;
+  }
+}
+
+.portfolio figure {
+  text-align: center
+}
+
+.img-portfolio {
+  height: 250px;
+  width: 350px;
+  /* está cortanto a primeira imagem*/
+  /*object-fit: cover;*/
+  object-position: left bottom;
+  transition: transform 500ms;
+}
+
+.img-portfolio:hover{
+  transform: scale(1.2);
+}
+
+.contato .icons {
+  text-align: center;
+}
+
+ .contato a {
+   color: whitesmoke;
+   font-size: 4em;
+   transition: text-shadow 1s;
+ }
+
+ .contato a:active,
+ .contato a:hover {
+   text-decoration: none;
+   text-shadow: 0px 8px 10px #CD853F;
+ }
+

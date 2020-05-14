@@ -10,20 +10,23 @@
     href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Fredericka+the+Great&family=Nixie+One&display=swap"
     rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/f5227bd232.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
   <header>
     <nav class="menu">
       <ul>
-        <li><a href="https://www.instagram.com/juliana.zambon/">Instagram</a></li>
-        <li><a href="#">Portfólio</a></li>
-        <li><a href="https://twitter.com/Juh_Zambon">Twitter</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#portfolio">Certificados</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
-    <div>
+    <div class="titulo">
       <h1 class="site-title">Juliana Zambon</h1>
       <h2 class="site-subtitle"> </h2>
+
       <style>
         h4::after {
           content: '|';
@@ -31,7 +34,8 @@
           opacity: 1;
           animation: pisca .7s infinite;
         }
- /*
+
+        /*
         h4::before {
           content: '|';
           margin-left: 5px;
@@ -69,13 +73,45 @@
     typeWriter(texto);
   </script>
 
-   </div>
-  </header>
 
-      <section class="portfólio">
-        <h2>Projetos</h2>
-        <div class="grid">
-    </div> 
-    
+  </div>
+  </header>
+  <section class="portfolio"  id="portfolio">
+    <h2>CERTIFICADOS</h2>
+    <div class="grid">
+      <figure>
+        <img class="img-portfolio" src="./img/certificadooba.jpg"
+          alt="Olimpíada Brasileira de Astronomia e Astronáutica">
+        <figcaption>Olimpíada Brasileira de Astronomia e Astronáutica</figcaption>
+      </figure>
+      <figure>
+        <img class="img-portfolio" src="./img/certificadopoo.jpg" alt="Curso de Introdução à POO">
+        <figcaption>Curso de Introdução à POO</figcaption>
+      </figure>
+      <figure>
+        <img class="img-portfolio" src="./img/certificadoalura1.jpg" alt="Curso de Lógica de Programação I">
+        <figcaption>Curso de Lógica de Programação I</figcaption>
+      </figure>
+    </div>
+
+
+  </section>
+  <section class="contato" id="contato">
+    <h2>CONTATO</h2>
+    <div class="grid icons">
+      <a target="_blank" href="https://github.com/JulianaZambon">
+        <i class="fab fa-github-square"></i>
+      </a>
+      <a target="_blank" href="https://twitter.com/Juh_Zambon">
+        <i class="fab fa-twitter-square"></i>
+      </a>
+      <a href="https://www.instagram.com/juliana.zambon/">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </section>
+
+
 </body>
+
 </html>
